@@ -4,11 +4,11 @@ A small NPM package that can be used to grab a HTML5 canvas running a star wars 
 
 ## Example - setting this as the background of some element
 
-```javascript
+```js
 import { getWarpSpeedController } from 'warpspeed';
 
 function chewiePunchIt() {
-  const warpSpeedController = getWarpSpeedController();
+  const warpSpeed = getWarpSpeedController();
   const someContainer = document.querySelector('#someContainerId');
   warpSpeed.mountCanvasTo(someContainer); // Renders in as a plain black canvas with no animation
   warpSpeed.render(); // Kicks off the animation
@@ -16,22 +16,22 @@ function chewiePunchIt() {
   // You can then...
 
   // Change the number of stars being rendered:
-  warpSpeedController.setNumberOfStars(2000); // Default is 7500
+  warpSpeed.setNumberOfStars(2000); // Default is 7500
 
   // Change the color of the stars:
-  warpSpeedController.setStarColor('rgb(255, 0, 0)'); // Default and my favourite is 'rainbow'
+  warpSpeed.setStarColor('rgb(255, 0, 0)'); // Default and my favourite is 'rainbow'
   // Note: Colour must be a valid CSS colour string, 'rainbow' is the only exception here
 
   // Change the size of the stars:
-  warpSpeedController.setStarRadii(5); // Default is 3
+  warpSpeed.setStarRadii(5); // Default is 3
 
   // Change the speed of the stars:
-  warpSpeedController.setStarVelocities(50); // Default is 3 (50 makes me feel a bit motion sick)
+  warpSpeed.setStarVelocities(50); // Default is 3 (50 makes me feel a bit motion sick)
 
   /* All of the above parameters can be passed as parameters when calling getWarpSpeedController but are optional */
 
   // And finally, you can remove the canvas from the DOM:
-  warpSpeedController.dismountCanvas();
+  warpSpeed.dismountCanvas();
 }
 ```
 
